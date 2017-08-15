@@ -46,7 +46,8 @@
     "prettier": "^1.5.3",
     "rimraf": "^2.6.1",
     "semantic-release": "^6.3.6",
-    "sinon": "^3.2.0"
+    "sinon": "^3.2.0",
+    "sr-release-notes-generator": "^1.0.0"
   },
   "engines": {
     "node": ">=4"
@@ -76,6 +77,11 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "release": {
+    "generateNotes": {
+      "path": "sr-release-notes-generator"
+    }
   },
   "repository": {
     "type": "git",
