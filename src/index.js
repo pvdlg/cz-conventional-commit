@@ -6,8 +6,8 @@ import format from './format-commit';
 
 const config = merge(configLoader.load(), {
   'cz-conventional-commit': {
-    maxSubjectLength: 50,
-    bodyLineLength: 72,
+    maxSubjectLength: 72,
+    bodyLineLength: 100,
   },
 })['cz-conventional-commit'];
 
