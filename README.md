@@ -12,6 +12,8 @@
 [![Travis](https://img.shields.io/travis/vanduynslagerp/cz-conventional-commit.svg)](https://travis-ci.org/vanduynslagerp/cz-conventional-commit)
 [![Codecov](https://img.shields.io/codecov/c/github/vanduynslagerp/cz-conventional-commit.svg)](https://codecov.io/gh/vanduynslagerp/cz-conventional-commit)
 
+![Screenshot](img/cz-conventional-commit.jpg?raw=true)
+
 ## Install as a global utility
 
 ```bash
