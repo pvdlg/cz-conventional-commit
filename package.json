@@ -1,0 +1,97 @@
+{
+  "name": "@metahub/cz-conventional-commit",
+  "description": "Commitizen adapter following the conventional-changelog format, with emojis. 🎉",
+  "version": "0.0.0-development",
+  "author": "Pierre Vanduynslager",
+  "bugs": {
+    "url": "https://github.com/vanduynslagerp/cz-conventional-commit/issues"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./lib/index.js"
+    }
+  },
+  "dependencies": {
+    "@metahub/conventional-commit-types": "^1.0.2",
+    "lodash": "^4.17.4",
+    "word-wrap": "^1.2.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^3.1.2",
+    "@commitlint/config-angular": "^3.1.1",
+    "@commitlint/core": "^3.1.2",
+    "@metahub/eslint-config": "^1.6.0",
+    "ava": "^0.21.0",
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-env": "^1.6.0",
+    "codecov": "^2.3.0",
+    "commitizen": "^2.9.6",
+    "conventional-commits-parser": "^2.0.0",
+    "eslint": "^4.4.1",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-ava": "^4.2.1",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-eslint-comments": "^1.0.3",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jasmine": "^2.8.4",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-prettier": "^2.1.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-sort-class-members": "^1.2.0",
+    "eslint-plugin-unicorn": "^2.1.2",
+    "husky": "^0.14.3",
+    "nyc": "^11.1.0",
+    "prettier": "^1.5.3",
+    "rimraf": "^2.6.1",
+    "semantic-release": "^6.3.6",
+    "sinon": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://github.com/vanduynslagerp/cz-conventional-commit#readme",
+  "keywords": [
+    "command-line",
+    "commit-hooks",
+    "commitizen",
+    "commitizen-adapter",
+    "conventional-commits",
+    "emoji",
+    "git"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "nyc": {
+    "include": [
+      "lib/**/*.js"
+    ]
+  },
+  "peerDependencies": {
+    "commitizen": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vanduynslagerp/cz-conventional-commit.git"
+  },
+  "scripts": {
+    "clean": "rimraf coverage && rimraf .nyc_output",
+    "cm": "git-cz",
+    "codecov": "codecov",
+    "commitmsg": "commitlint -e",
+    "compile": "rimraf lib && babel src --source-maps --out-dir lib",
+    "lint": "eslint src test package.json",
+    "precommit": "npm run lint",
+    "prepublishOnly": "npm run compile",
+    "pretest": "npm run clean && npm run compile && npm run lint",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "nyc --all ava -v && nyc report --reporter=lcov"
+  }
+}
