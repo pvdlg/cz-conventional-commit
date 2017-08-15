@@ -83,11 +83,11 @@ See [commitizen documentation](https://github.com/commitizen/cz-cli#making-your-
 Aliases are additionnal commit types that will be formatted to follow [AngularJS Commit Message Conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit) and automatically set some fields.
 
 For example when choosing `initial`, `cz-conventional-commit` will automatically set:
-* the standard type to `feat`
-* the `scope` to empty
-* the `subject` to 'Initial commit 🎉'
-* the `issues` to empty
-* the `breaking` to empty
+*   the standard type to `feat`
+*   the `scope` to empty
+*   the `subject` to 'Initial commit 🎉'
+*   the `issues` to empty
+*   the `breaking` to empty
 
 The commit message will be `feat: Initial commit 🎉`.
 
@@ -101,4 +101,4 @@ The commit message will be `feat: Initial commit 🎉`.
 
 ## Related
 
-- [conventional-commit-types](hhttps://github.com/vanduynslagerp/conventional-commit-types) - List of conventional commit types and aliases for this module
+*   [conventional-commit-types](hhttps://github.com/vanduynslagerp/conventional-commit-types) - List of conventional commit types and aliases for this module
