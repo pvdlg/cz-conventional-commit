@@ -45,7 +45,7 @@
     "nyc": "^11.1.0",
     "prettier": "^1.5.3",
     "rimraf": "^2.6.1",
-    "semantic-release": "^6.3.6",
+    "semantic-release": "^7.0.1",
     "sinon": "^3.2.0",
     "sr-release-notes-generator": "^1.0.0"
   },
