@@ -20,7 +20,7 @@
     "@commitlint/cli": "^3.1.3",
     "@commitlint/config-angular": "^3.1.1",
     "@commitlint/core": "^3.1.3",
-    "@metahub/eslint-config": "^1.6.0",
+    "@metahub/eslint-config": "^1.6.1",
     "ava": "^0.22.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",
