@@ -1,5 +1,6 @@
 import test from 'ava';
-import {types, aliases} from '@metahub/conventional-commit-types';
+import {types} from 'conventional-changelog-metahub/types';
+import aliases from '../lib/aliases';
 import questions from '../lib/questions';
 
 const qOrder = ['type', 'scope', 'subject', 'body', 'breaking', 'issues'];

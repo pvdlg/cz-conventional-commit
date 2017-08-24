@@ -101,4 +101,4 @@ The commit message will be `feat: Initial commit 🎉`.
 
 ## Related
 
-*   [conventional-commit-types](hhttps://github.com/vanduynslagerp/conventional-commit-types) - List of conventional commit types and aliases for this module
+*   [conventional-changelog-metahub](https://github.com/vanduynslagerp/conventional-changelog-metahub) - List of conventional commit types and aliases for this module

@@ -1,7 +1,8 @@
 import test from 'ava';
 import {maxBy} from 'lodash';
 import parser from 'conventional-commits-parser';
-import {types, aliases} from '@metahub/conventional-commit-types';
+import {types} from 'conventional-changelog-metahub/types';
+import aliases from '../lib/aliases';
 import formatCommit from '../lib/format-commit';
 
 const config = {maxSubjectLength: 50, bodyLineLength: 72};
