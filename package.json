@@ -47,6 +47,7 @@
     "rimraf": "^2.6.1",
     "semantic-release": "^8.0.0",
     "sinon": "^3.2.1",
+    "sr-commit-analyzer": "^2.0.1",
     "sr-release-notes-generator": "^1.1.1"
   },
   "engines": {
@@ -81,6 +82,9 @@
   "release": {
     "generateNotes": {
       "path": "sr-release-notes-generator"
+    },
+    "analyzeCommits": {
+      "path": "sr-commit-analyzer"
     }
   },
   "repository": {
