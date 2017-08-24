@@ -18,7 +18,7 @@
 ## Install as a global utility
 
 ```bash
-npm install --global commitizen cz-conventional-commit
+npm install --global commitizen @metahub/cz-conventional-commit
 ```
 Create a .czrc file in your home directory, with the following content:
 ```json
@@ -36,8 +36,8 @@ See [commitizen documentation](https://github.com/commitizen/cz-cli#conventional
 
 ## Making your repo Commitizen-friendly
 ```bash
-npm install --save-dev commitizen cz-conventional-commit
-./node_modules/.bin/commitizen init @metahub/cz-conventional-commit --save-dev --save-exact
+npm install --save-dev commitizen @metahub/cz-conventional-commit
+./node_modules/.bin/commitizen init @metahub/cz-conventional-commit --save-dev
 ```
 You can customize cz-conventional-commit in `package.json`:
 ```json
