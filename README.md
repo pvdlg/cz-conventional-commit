@@ -10,6 +10,7 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 [![Travis](https://img.shields.io/travis/vanduynslagerp/cz-conventional-commit.svg)](https://travis-ci.org/vanduynslagerp/cz-conventional-commit)
+[![Code Climate](https://img.shields.io/codeclimate/github/vanduynslagerp/cz-conventional-commit.svg)](https://codeclimate.com/github/vanduynslagerp/cz-conventional-commit)
 [![Codecov](https://img.shields.io/codecov/c/github/vanduynslagerp/cz-conventional-commit.svg)](https://codecov.io/gh/vanduynslagerp/cz-conventional-commit)
 
 ![Screenshot](img/cz-conventional-commit.jpg?raw=true)
