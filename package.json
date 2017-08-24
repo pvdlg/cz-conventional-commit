@@ -27,6 +27,7 @@
     "babel-preset-env": "^1.6.0",
     "codecov": "^2.3.0",
     "commitizen": "^2.9.6",
+    "conventional-changelog-metahub": "^1.0.0",
     "conventional-commits-parser": "^2.0.0",
     "eslint": "^4.5.0",
     "eslint-config-prettier": "^2.3.0",
@@ -80,11 +81,14 @@
     "access": "public"
   },
   "release": {
-    "generateNotes": {
-      "path": "sr-release-notes-generator"
-    },
     "analyzeCommits": {
-      "path": "sr-commit-analyzer"
+      "path": "sr-commit-analyzer",
+      "preset": "metahub",
+      "releaseRules": "conventional-changelog-metahub/release-rules"
+    },
+    "generateNotes": {
+      "path": "sr-release-notes-generator",
+      "preset": "metahub"
     }
   },
   "repository": {
