@@ -2,7 +2,8 @@ import test from 'ava';
 import {spy, stub} from 'sinon';
 import parser from 'conventional-commits-parser';
 import {lint, load} from '@commitlint/core';
-import {types, aliases} from '@metahub/conventional-commit-types';
+import {types} from 'conventional-changelog-metahub/types';
+import aliases from '../lib/aliases';
 import engine from '../lib/index';
 
 // eslint-disable-next-line ava/no-cb-test
