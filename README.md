@@ -47,7 +47,8 @@ You can customize cz-conventional-commit in `package.json`:
     "path": "@metahub/cz-conventional-commit",
     "cz-conventional-commit": {
       "maxSubjectLength": 72,
-      "bodyLineLength": 100
+      "bodyLineLength": 100,
+      "emoji": true
     }
   }
 }
@@ -62,6 +63,7 @@ See [commitizen documentation](https://github.com/commitizen/cz-cli#making-your-
 | ------------------ | ------------------------------------------------------------------------------------------ | ------- |
 | `maxSubjectLength` | Length at which to truncate the commit head (head includes type, scope, subject and emoji) | 72      |
 | `bodyLineLength`   | Length at which to wrap body lines                                                         | 100     |
+| `emoji`            | To add and emoji at the end of the commit message                                          | `false` |
 
 ## Commit types
 

@@ -5,9 +5,9 @@ import {merge} from 'lodash';
 import questions from './questions';
 import format from './format-commit';
 
-const config = merge(configLoader.load(), {'cz-conventional-commit': {maxSubjectLength: 72, bodyLineLength: 100}})[
-  'cz-conventional-commit'
-];
+const config = merge(configLoader.load(), {
+  'cz-conventional-commit': {maxSubjectLength: 72, bodyLineLength: 100, emoji: false},
+})['cz-conventional-commit'];
 
 module.exports = {
   prompter(cz, commit) {

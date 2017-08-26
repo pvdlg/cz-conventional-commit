@@ -16,6 +16,7 @@ import {typesOrder} from 'conventional-changelog-metahub/types';
  * @param {Object} config configuration
  * @param {string} config.maxSubjectLength maximum subject length
  * @param {string} config.bodyLineLength length of body lines
+ * @param {boolean} config.emoji `true` to add emoji at the end of the commit message
  */
 export default function questions(options, config) {
   const {types, aliases} = options;
