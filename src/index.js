@@ -1,7 +1,7 @@
 import {types} from 'conventional-changelog-metahub/types';
+import aliases from 'conventional-changelog-metahub/aliases';
 import {configLoader} from 'commitizen';
 import {merge} from 'lodash';
-import aliases from './aliases';
 import questions from './questions';
 import format from './format-commit';
 

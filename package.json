@@ -12,7 +12,7 @@
     }
   },
   "dependencies": {
-    "conventional-changelog-metahub": "^1.0.0",
+    "conventional-changelog-metahub": "^1.1.0",
     "lodash": "^4.17.4",
     "word-wrap": "^1.2.3"
   },

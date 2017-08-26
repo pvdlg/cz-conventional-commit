@@ -1,6 +1,6 @@
 import test from 'ava';
 import {types} from 'conventional-changelog-metahub/types';
-import aliases from '../lib/aliases';
+import aliases from 'conventional-changelog-metahub/aliases';
 import questions from '../lib/questions';
 
 const qOrder = ['type', 'scope', 'subject', 'body', 'breaking', 'issues'];
