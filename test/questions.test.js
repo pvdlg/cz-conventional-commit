@@ -1,5 +1,5 @@
 import test from 'ava';
-import {types} from 'conventional-changelog-metahub/types';
+import {types, typesOrder} from 'conventional-changelog-metahub/types';
 import aliases from 'conventional-changelog-metahub/aliases';
 import questions from '../lib/questions';
 
@@ -84,5 +84,11 @@ test('Choices of type question are formatted properly (description of each choic
     if (index > 0) {
       t.is(/.*?:\s+/.exec(choice.name)[0].length, /.*?:\s+/.exec(choices[index - 1].name)[0].length);
     }
+  });
+});
+
+test('Choices are ordered based on ', t => {
+  questions({types, aliases}, config)[qOrder.indexOf('type')].choices.forEach((choice, index) => {
+    t.is(typesOrder.indexOf(choice.value), index);
   });
 });

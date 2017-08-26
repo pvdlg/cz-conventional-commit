@@ -1,4 +1,5 @@
 import {map, padEnd, maxBy} from 'lodash';
+import {typesOrder} from 'conventional-changelog-metahub/types';
 
 /**
  * Create the Inquirer.js questions object.
@@ -23,7 +24,7 @@ export default function questions(options, config) {
   const choices = map(allTypes, (type, key) => ({
     name: `${padEnd(`${key}:`, length)} ${type.emoji}  ${type.description}`,
     value: key,
-  }));
+  })).sort((choice1, choice2) => (typesOrder.indexOf(choice1.value) < typesOrder.indexOf(choice2.value) ? -1 : 1));
 
   return [
     {type: 'list', name: 'type', message: "Select the type of change that you're committing:", choices},
