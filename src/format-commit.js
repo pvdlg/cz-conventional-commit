@@ -23,7 +23,7 @@ import {truncate} from 'lodash';
  * @param {Object} config configuration
  * @param {string} config.maxSubjectLength maximum subject length
  * @param {string} config.bodyLineLength length of body lines
- * 
+ * @param {boolean} config.emoji `true` to add emoji at the end of the commit message
  * @return {string} formatted commit
  */
 export default function formatCommit(answers, options, config) {
@@ -39,12 +39,12 @@ export default function formatCommit(answers, options, config) {
   const scope = answers.scope ? answers.scope.trim() : '';
   const isAlias = !Object.prototype.hasOwnProperty.call(types, answers.type);
   const type = isAlias ? aliases[answers.type].type : answers.type;
-  const emoji = isAlias ? aliases[answers.type].emoji : types[type].emoji;
+  const emoji = config.emoji ? (isAlias ? aliases[answers.type].emoji : types[type].emoji) : '';
   // Limit head to maxSubjectLength (including the trailing emoji)
   // We use the String.length function to determine the length of the emoji even it returns an innacurate value (2 chars per emoji), because most likely a commit hook or linter veryfyingt he head length will also use String.length.
   const head = `${truncate(`${type}${scope ? `(${scope})` : ''}: ${answers.subject.trim()}`, {
-    length: config.maxSubjectLength - emoji.length - 1,
-  })} ${emoji}`;
+    length: config.maxSubjectLength - (config.emoji ? emoji.length + 1 : 0),
+  })}${config.emoji ? ` ${emoji}` : ''}`;
   const body = wrap(answers.body, wrapOptions);
   const footer = [
     answers.breaking

@@ -12,7 +12,7 @@
     }
   },
   "dependencies": {
-    "conventional-changelog-metahub": "^1.0.0",
+    "conventional-changelog-metahub": "^1.1.0",
     "lodash": "^4.17.4",
     "word-wrap": "^1.2.3"
   },
@@ -103,6 +103,7 @@
     "commitmsg": "commitlint -e",
     "compile": "rimraf lib && babel src --source-maps --out-dir lib",
     "lint": "eslint src test package.json",
+    "postcheckout": "yarn install || (rimraf && npm install)",
     "precommit": "npm run lint",
     "prepublishOnly": "npm run compile",
     "prepush": "ava -v",
