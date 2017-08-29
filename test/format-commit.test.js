@@ -12,9 +12,14 @@ test('Each type and aliases produce a commit with the input subject', t => {
     subject: 'Commit subject',
   };
 
-  Object.keys(types).concat(Object.keys(aliases)).forEach(type => {
-    t.is(parser.sync(formatCommit(Object.assign({}, {type}, input), {types, aliases}, config)).subject, input.subject);
-  });
+  Object.keys(types)
+    .concat(Object.keys(aliases))
+    .forEach(type => {
+      t.is(
+        parser.sync(formatCommit(Object.assign({}, {type}, input), {types, aliases}, config)).subject,
+        input.subject
+      );
+    });
 });
 
 test('Each type and aliases produce a commit with a subject ending with the appropriate emoji', t => {
@@ -22,15 +27,17 @@ test('Each type and aliases produce a commit with a subject ending with the appr
     subject: 'Commit subject',
   };
 
-  Object.keys(types).concat(Object.keys(aliases)).forEach(type => {
-    t.true(
-      parser
-        .sync(
-          formatCommit(Object.assign({}, {type}, input), {types, aliases}, Object.assign({}, config, {emoji: true}))
-        )
-        .subject.endsWith(aliases[type] ? aliases[type].emoji : types[type].emoji)
-    );
-  });
+  Object.keys(types)
+    .concat(Object.keys(aliases))
+    .forEach(type => {
+      t.true(
+        parser
+          .sync(
+            formatCommit(Object.assign({}, {type}, input), {types, aliases}, Object.assign({}, config, {emoji: true}))
+          )
+          .subject.endsWith(aliases[type] ? aliases[type].emoji : types[type].emoji)
+      );
+    });
 });
 
 test('Does not duplicate "BREAKING CHANGE" in commit message if it`s defined by user', t => {
