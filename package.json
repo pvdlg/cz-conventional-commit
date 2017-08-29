@@ -104,7 +104,7 @@
     "compile": "rimraf lib && babel src --source-maps --out-dir lib",
     "lint": "eslint src test package.json",
     "postcheckout": "yarn install || (rimraf && npm install)",
-    "precommit": "npm run lint",
+    "precommit": "npm run compile && npm run lint",
     "prepublishOnly": "npm run compile",
     "prepush": "ava -v",
     "pretest": "npm run clean && npm run compile && npm run lint",
