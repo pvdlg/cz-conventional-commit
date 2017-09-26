@@ -46,7 +46,7 @@
     "prettier": "^1.6.0",
     "rimraf": "^2.6.1",
     "semantic-release": "^8.0.0",
-    "sinon": "^3.2.1",
+    "sinon": "^4.0.0",
     "sr-commit-analyzer": "^2.0.1",
     "sr-release-notes-generator": "^1.1.1",
     "stringz": "^0.2.2"
