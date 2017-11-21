@@ -3,10 +3,10 @@ import {typesOrder} from 'conventional-changelog-metahub/types';
 
 /**
  * Create the Inquirer.js questions object.
- * 
+ *
  * @method questions
  * @param {Object} options options to create the questions
- * @param {Object} options.types list of commit type 
+ * @param {Object} options.types list of commit type
  * @param {string} options.types.description commit type description
  * @param {string} options.types.emoji commit type emoji
  * @param {Object} options.aliases list of commit aliases
@@ -51,7 +51,9 @@ export default function questions(options, config) {
     {
       type: 'input',
       name: 'subject',
-      message: `Write a short, imperative tense description of the change (max header length: ${config.maxSubjectLength}):\n`,
+      message: `Write a short, imperative tense description of the change (max header length: ${
+        config.maxSubjectLength
+      }):\n`,
       default(answers) {
         if (answers.type === 'initial') {
           return aliases[answers.type].description;
