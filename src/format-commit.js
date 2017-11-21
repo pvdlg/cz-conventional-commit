@@ -3,7 +3,7 @@ import {truncate} from 'lodash';
 
 /**
  * Create a formatted commit message based on answers provided by user.
- * 
+ *
  * @method formatCommit
  * @param {Object} answers Inquirer.js answers
  * @param {string} answers.type answer to the type question
@@ -13,7 +13,7 @@ import {truncate} from 'lodash';
  * @param {string} answers.breaking answer to the breaking question
  * @param {string} answers.issues answer to the issues question
  * @param {Object} options options to create the questions
- * @param {Object} options.types list of commit type 
+ * @param {Object} options.types list of commit type
  * @param {string} options.types.description commit type description
  * @param {string} options.types.emoji commit type emoji
  * @param {Object} options.aliases list of commit aliases
