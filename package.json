@@ -49,7 +49,7 @@
     "sinon": "^4.0.0",
     "sr-commit-analyzer": "^2.0.1",
     "sr-release-notes-generator": "^1.1.1",
-    "stringz": "^0.3.0"
+    "stringz": "^0.4.0"
   },
   "engines": {
     "node": ">=4"
