@@ -19,7 +19,7 @@
   "devDependencies": {
     "@commitlint/cli": "^5.0.1",
     "@commitlint/config-angular": "^5.1.1",
-    "@commitlint/core": "^5.0.2",
+    "@commitlint/core": "^6.0.0",
     "ava": "^0.24.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.0",
