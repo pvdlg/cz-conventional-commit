@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^5.0.1",
-    "@commitlint/config-angular": "^5.1.1",
+    "@commitlint/config-angular": "^6.0.2",
     "@commitlint/core": "^5.0.2",
     "ava": "^0.24.0",
     "babel-cli": "^6.26.0",
