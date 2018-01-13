@@ -6,7 +6,6 @@
 [![npm](https://img.shields.io/npm/dt/@metahub/cz-conventional-commit.svg)](https://www.npmjs.com/package/@metahub/cz-conventional-commit)
 [![Greenkeeper badge](https://badges.greenkeeper.io/vanduynslagerp/cz-conventional-commit.svg)](https://greenkeeper.io/)
 [![license](https://img.shields.io/github/license/vanduynslagerp/cz-conventional-commit.svg)](https://github.com/vanduynslagerp/cz-conventional-commit/blob/master/LICENSE)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 [![Travis](https://img.shields.io/travis/vanduynslagerp/cz-conventional-commit.svg)](https://travis-ci.org/vanduynslagerp/cz-conventional-commit)
 [![Codecov](https://img.shields.io/codecov/c/github/vanduynslagerp/cz-conventional-commit.svg)](https://codecov.io/gh/vanduynslagerp/cz-conventional-commit)
