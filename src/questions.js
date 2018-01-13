@@ -63,9 +63,8 @@ export default function questions(options, config) {
       validate(input) {
         if (input) {
           return true;
-        } else {
-          return 'Commit subject message is mandatory';
         }
+        return 'Commit subject message is mandatory';
       },
     },
     {type: 'input', name: 'body', message: 'Provide a longer description of the change:\n'},
