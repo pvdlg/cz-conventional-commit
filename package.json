@@ -7,37 +7,28 @@
     "url": "https://github.com/vanduynslagerp/cz-conventional-commit/issues"
   },
   "dependencies": {
+    "commitizen": "^2.9.6",
     "conventional-changelog-metahub": "^1.1.0",
     "lodash": "^4.17.4",
     "word-wrap": "^1.2.3"
   },
   "devDependencies": {
+    "@commitlint/core": "^6.0.2",
     "ava": "^0.24.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "codecov": "^3.0.0",
     "conventional-commits-parser": "^2.0.0",
     "emoji-regex": "^6.5.1",
-    "eslint": "^4.5.0",
-    "eslint-config-prettier": "^2.3.0",
-    "eslint-config-pretty": "^2.1.1",
-    "eslint-plugin-ava": "^4.2.1",
-    "eslint-plugin-babel": "^4.1.2",
-    "eslint-plugin-eslint-comments": "^2.0.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jasmine": "^2.8.4",
-    "eslint-plugin-json": "^1.2.0",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-prettier": "^2.2.0",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-sort-class-members": "^1.2.0",
-    "eslint-plugin-unicorn": "^3.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.4.0",
     "nyc": "^11.1.0",
-    "prettier": "^1.7.2",
+    "prettier": "~1.10.0",
     "rimraf": "^2.6.1",
     "semantic-release": "^12.0.0",
     "sinon": "^4.0.0",
-    "stringz": "^0.4.0"
+    "stringz": "^0.4.0",
+    "xo": "^0.18.2"
   },
   "engines": {
     "node": ">=4"
@@ -71,6 +62,12 @@
   "peerDependencies": {
     "commitizen": "*"
   },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "trailingComma": "es5"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -88,13 +85,17 @@
     "url": "https://github.com/vanduynslagerp/cz-conventional-commit.git"
   },
   "scripts": {
-    "clean": "rimraf coverage && rimraf .nyc_output",
     "codecov": "codecov -f coverage/coverage-final.json",
     "compile": "rimraf lib && babel src --source-maps --out-dir lib",
-    "lint": "eslint src test package.json",
+    "lint": "xo",
     "prepublishOnly": "npm run compile",
-    "pretest": "npm run clean && npm run compile && npm run lint",
+    "pretest": "npm run compile && npm run lint",
     "semantic-release": "semantic-release",
     "test": "nyc ava -vv"
+  },
+  "xo": {
+    "extends": [
+      "plugin:prettier/recommended"
+    ]
   }
 }
