@@ -2,13 +2,10 @@
 
 [commitizen](https://github.com/commitizen/cz-cli) adapter following the [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog) format, with emojis and additionnal commit types (aliases).
 
-[![npm](https://img.shields.io/npm/v/@metahub/cz-conventional-commit.svg)](https://www.npmjs.com/package/@metahub/cz-conventional-commit)
-[![npm](https://img.shields.io/npm/dt/@metahub/cz-conventional-commit.svg)](https://www.npmjs.com/package/@metahub/cz-conventional-commit)
-[![Greenkeeper badge](https://badges.greenkeeper.io/vanduynslagerp/cz-conventional-commit.svg)](https://greenkeeper.io/)
-[![license](https://img.shields.io/github/license/vanduynslagerp/cz-conventional-commit.svg)](https://github.com/vanduynslagerp/cz-conventional-commit/blob/master/LICENSE)
-
 [![Travis](https://img.shields.io/travis/vanduynslagerp/cz-conventional-commit.svg)](https://travis-ci.org/vanduynslagerp/cz-conventional-commit)
 [![Codecov](https://img.shields.io/codecov/c/github/vanduynslagerp/cz-conventional-commit.svg)](https://codecov.io/gh/vanduynslagerp/cz-conventional-commit)
+[![Greenkeeper badge](https://badges.greenkeeper.io/vanduynslagerp/cz-conventional-commit.svg)](https://greenkeeper.io/)
+[![license](https://img.shields.io/github/license/vanduynslagerp/cz-conventional-commit.svg)](https://github.com/vanduynslagerp/cz-conventional-commit/blob/master/LICENSE)
 
 ![Screenshot](img/cz-conventional-commit.jpg?raw=true)
 
@@ -64,41 +61,41 @@ See [commitizen documentation](https://github.com/commitizen/cz-cli#making-your-
 
 ## Commit types
 
-| Commit Type | Title                    | Description                                                                                                 | Emoji  |
-| ----------- | ------------------------ | ----------------------------------------------------------------------------------------------------------- |:------:|
-| `feat`      | Features                 | A new feature                                                                                               | ✨     |
-| `fix`       | Bug Fixes                | A bug Fix                                                                                                   | 🐛     |
-| `docs`      | Documentation            | Documentation only changes                                                                                  | 📚     |
-| `style`     | Styles                   | Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)      | 💎     |
-| `refactor`  | Code Refactoring         | A code change that neither fixes a bug nor adds a feature                                                   | 📦     |
-| `perf`      | Performance Improvements | A code change that improves performance                                                                     | 🚀     |
-| `test`      | Tests                    | Adding missing tests or correcting existing tests                                                           | 🚨     |
-| `build`     | Builds                   | Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)         | 🛠     |
-| `ci`        | Continuous Integrations  | Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs) | ⚙️     |
-| `chore`     | Chores                   | Other changes that don't modify src or test files                                                           | ♻️     |
-| `revert`    | Reverts                  | Reverts a previous commit                                                                                   | 🗑     |
+| Commit Type | Title                    | Description                                                                                                 | Emoji |
+|-------------|--------------------------|-------------------------------------------------------------------------------------------------------------|:-----:|
+| `feat`      | Features                 | A new feature                                                                                               |   ✨   |
+| `fix`       | Bug Fixes                | A bug Fix                                                                                                   |  🐛   |
+| `docs`      | Documentation            | Documentation only changes                                                                                  |  📚   |
+| `style`     | Styles                   | Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)      |  💎   |
+| `refactor`  | Code Refactoring         | A code change that neither fixes a bug nor adds a feature                                                   |  📦   |
+| `perf`      | Performance Improvements | A code change that improves performance                                                                     |  🚀   |
+| `test`      | Tests                    | Adding missing tests or correcting existing tests                                                           |  🚨   |
+| `build`     | Builds                   | Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)         |  🛠   |
+| `ci`        | Continuous Integrations  | Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs) |   ⚙️  |
+| `chore`     | Chores                   | Other changes that don't modify src or test files                                                           |   ♻️  |
+| `revert`    | Reverts                  | Reverts a previous commit                                                                                   |  🗑   |
 
 ## Commit aliases
 
 Aliases are additionnal commit types that will be formatted to follow [AngularJS Commit Message Conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit) and automatically set some fields.
 
 For example when choosing `initial`, `cz-conventional-commit` will automatically set:
-*   the standard type to `feat`
-*   the `scope` to empty
-*   the `subject` to 'Initial commit 🎉'
-*   the `issues` to empty
-*   the `breaking` to empty
+- the standard type to `feat`
+- the `scope` to empty
+- the `subject` to 'Initial commit 🎉'
+- the `issues` to empty
+- the `breaking` to empty
 
 The commit message will be `feat: Initial commit 🎉`.
 
-| Commit Type        | Type    | Scope (default)   | Subject (default)               | Emoji  |
-| ------------------ | ------- | ----------------- | ------------------------------  |:------:|
-| `initial`          | `feat`  | `empty`           | Initial commit                  | 🎉     |
-| `dependencies`     | `fix`   | package           | -                               | ⏫     |
-| `peerDependencies` | `fix`   | package           | -                               | ⬆️     |
-| `devDependencies`  | `chore` | package           | -                               | 🔼     |
-| `metadata`         | `fix`   | package           | -                               | 📦     |
+| Commit Type        | Type    | Scope (default) | Subject (default) | Emoji |
+|--------------------|---------|-----------------|-------------------|:-----:|
+| `initial`          | `feat`  | `empty`         | Initial commit    |  🎉   |
+| `dependencies`     | `fix`   | package         | -                 |   ⏫   |
+| `peerDependencies` | `fix`   | package         | -                 |   ⬆️  |
+| `devDependencies`  | `chore` | package         | -                 |  🔼   |
+| `metadata`         | `fix`   | package         | -                 |  📦   |
 
 ## Related
 
-*   [conventional-changelog-metahub](https://github.com/vanduynslagerp/conventional-changelog-metahub) - List of conventional commit types and aliases for this module
+- [conventional-changelog-metahub](https://github.com/vanduynslagerp/conventional-changelog-metahub) - List of conventional commit types and aliases for this module
