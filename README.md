@@ -2,10 +2,10 @@
 
 [commitizen](https://github.com/commitizen/cz-cli) adapter following the [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog) format, with emojis and additionnal commit types (aliases).
 
-[![Travis](https://img.shields.io/travis/vanduynslagerp/cz-conventional-commit.svg)](https://travis-ci.org/vanduynslagerp/cz-conventional-commit)
-[![Codecov](https://img.shields.io/codecov/c/github/vanduynslagerp/cz-conventional-commit.svg)](https://codecov.io/gh/vanduynslagerp/cz-conventional-commit)
-[![Greenkeeper badge](https://badges.greenkeeper.io/vanduynslagerp/cz-conventional-commit.svg)](https://greenkeeper.io/)
-[![license](https://img.shields.io/github/license/vanduynslagerp/cz-conventional-commit.svg)](https://github.com/vanduynslagerp/cz-conventional-commit/blob/master/LICENSE)
+[![Travis](https://img.shields.io/travis/pvdlg/cz-conventional-commit.svg)](https://travis-ci.org/pvdlg/cz-conventional-commit)
+[![Codecov](https://img.shields.io/codecov/c/github/pvdlg/cz-conventional-commit.svg)](https://codecov.io/gh/pvdlg/cz-conventional-commit)
+[![Greenkeeper badge](https://badges.greenkeeper.io/pvdlg/cz-conventional-commit.svg)](https://greenkeeper.io/)
+[![license](https://img.shields.io/github/license/pvdlg/cz-conventional-commit.svg)](https://github.com/pvdlg/cz-conventional-commit/blob/master/LICENSE)
 
 ![Screenshot](img/cz-conventional-commit.jpg?raw=true)
 
@@ -98,4 +98,4 @@ The commit message will be `feat: Initial commit 🎉`.
 
 ## Related
 
-- [conventional-changelog-metahub](https://github.com/vanduynslagerp/conventional-changelog-metahub) - List of conventional commit types and aliases for this module
+- [conventional-changelog-metahub](https://github.com/pvdlg/conventional-changelog-metahub) - List of conventional commit types and aliases for this module
