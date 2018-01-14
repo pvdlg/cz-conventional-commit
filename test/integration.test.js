@@ -4,7 +4,7 @@ import parser from 'conventional-commits-parser';
 import {lint, load} from '@commitlint/core';
 import {types} from 'conventional-changelog-metahub/types';
 import aliases from 'conventional-changelog-metahub/aliases';
-import engine from '../lib/index';
+import engine from '..';
 
 // eslint-disable-next-line ava/no-cb-test
 test.cb(
