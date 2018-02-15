@@ -18,10 +18,7 @@
     "codecov": "^3.0.0",
     "conventional-commits-parser": "^2.0.0",
     "emoji-regex": "^6.5.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.4.0",
     "nyc": "^11.1.0",
-    "prettier": "~1.10.0",
     "semantic-release": "^12.0.0",
     "sinon": "^4.0.0",
     "stringz": "^0.4.0",
@@ -91,8 +88,6 @@
     "test": "nyc ava -v"
   },
   "xo": {
-    "extends": [
-      "plugin:prettier/recommended"
-    ]
+    "prettier": true
   }
 }
