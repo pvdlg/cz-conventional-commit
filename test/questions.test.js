@@ -15,11 +15,11 @@ const config = {maxSubjectLength: 50, bodyLineLength: 72};
  * @param {Object} answers answers provided so far
  */
 function shouldSkip(t, question, answers) {
-  t.false(questions({types, aliases}, config)[qOrder.indexOf(question)].when(answers));
+	t.false(questions({types, aliases}, config)[qOrder.indexOf(question)].when(answers));
 }
 
 shouldSkip.title = (providedTitle, question, answers) =>
-  `Skip "${question}" question when answers are ${JSON.stringify(answers)}`;
+	`Skip "${question}" question when answers are ${JSON.stringify(answers)}`;
 
 /**
  * AVA macro to verifies that a question as a specific default answer for a given answers object.
@@ -31,11 +31,11 @@ shouldSkip.title = (providedTitle, question, answers) =>
  * @param {string} expected expected default value
  */
 function hasDefault(t, question, answers, expected) {
-  t.is(questions({types, aliases}, config)[qOrder.indexOf(question)].default(answers), expected);
+	t.is(questions({types, aliases}, config)[qOrder.indexOf(question)].default(answers), expected);
 }
 
 hasDefault.title = (providedTitle, question, answers, expected) =>
-  `"${question}" question default value is "${expected}" when answers are ${JSON.stringify(answers)}`;
+	`"${question}" question default value is "${expected}" when answers are ${JSON.stringify(answers)}`;
 
 /**
  * AVA macro to verifies that a question return an error message for a given answer.
@@ -47,15 +47,15 @@ hasDefault.title = (providedTitle, question, answers, expected) =>
  * @param {string} expected regex to match the expected error message
  */
 function hasValidationMessage(t, question, input, expected) {
-  if (expected instanceof RegExp) {
-    t.regex(questions({types, aliases}, config)[qOrder.indexOf(question)].validate(input), expected);
-  } else {
-    t.is(questions({types, aliases}, config)[qOrder.indexOf(question)].validate(input), expected);
-  }
+	if (expected instanceof RegExp) {
+		t.regex(questions({types, aliases}, config)[qOrder.indexOf(question)].validate(input), expected);
+	} else {
+		t.is(questions({types, aliases}, config)[qOrder.indexOf(question)].validate(input), expected);
+	}
 }
 
 hasValidationMessage.title = (providedTitle, question, input, expected) =>
-  `"${question}" question error message is "${expected}" when answer is "${input}"`;
+	`"${question}" question error message is "${expected}" when answer is "${input}"`;
 
 test(shouldSkip, 'scope', {type: 'initial'});
 
@@ -76,19 +76,19 @@ test(hasValidationMessage, 'subject', '', /\w/);
 test(hasValidationMessage, 'subject', 'Test value', true);
 
 test('Questions are asked in the expected order', t => {
-  t.deepEqual(qOrder, questions({types, aliases}, config).map(question => question.name));
+	t.deepEqual(qOrder, questions({types, aliases}, config).map(question => question.name));
 });
 
 test('Choices of type question are formatted properly (description of each choice is vertically aligned)', t => {
-  questions({types, aliases}, config)[qOrder.indexOf('type')].choices.forEach((choice, index, choices) => {
-    if (index > 0) {
-      t.is(/.*?:\s+/.exec(choice.name)[0].length, /.*?:\s+/.exec(choices[index - 1].name)[0].length);
-    }
-  });
+	questions({types, aliases}, config)[qOrder.indexOf('type')].choices.forEach((choice, index, choices) => {
+		if (index > 0) {
+			t.is(/.*?:\s+/.exec(choice.name)[0].length, /.*?:\s+/.exec(choices[index - 1].name)[0].length);
+		}
+	});
 });
 
 test('Choices are ordered based on ', t => {
-  questions({types, aliases}, config)[qOrder.indexOf('type')].choices.forEach((choice, index) => {
-    t.is(typesOrder.indexOf(choice.value), index);
-  });
+	questions({types, aliases}, config)[qOrder.indexOf('type')].choices.forEach((choice, index) => {
+		t.is(typesOrder.indexOf(choice.value), index);
+	});
 });
