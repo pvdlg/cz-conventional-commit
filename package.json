@@ -13,7 +13,7 @@
     "word-wrap": "^1.2.3"
   },
   "devDependencies": {
-    "@commitlint/core": "^6.0.2",
+    "@commitlint/core": "^7.0.0",
     "ava": "^0.25.0",
     "codecov": "^3.0.0",
     "conventional-commits-parser": "^3.0.0",
