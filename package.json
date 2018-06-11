@@ -20,7 +20,7 @@
     "emoji-regex": "^7.0.0",
     "nyc": "^12.0.1",
     "semantic-release": "^15.0.0",
-    "sinon": "^5.0.1",
+    "sinon": "^6.0.0",
     "stringz": "^1.0.0",
     "xo": "^0.21.0"
   },
