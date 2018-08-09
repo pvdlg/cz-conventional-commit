@@ -10,6 +10,10 @@ branches:
     - master
     - /^greenkeeper.*$/
 
+cache:
+  directories:
+    - ~/.npm
+
 install:
   - travis_retry npm install
 
