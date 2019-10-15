@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "commitizen": "^3.0.0",
-    "conventional-changelog-metahub": "^2.0.1",
+    "conventional-changelog-metahub": "^3.0.0",
     "lodash": "^4.17.4",
     "word-wrap": "^1.2.3"
   },
