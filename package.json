@@ -3,6 +3,14 @@
   "description": "Commitizen adapter following the conventional-changelog format, with emojis. 🎉",
   "version": "0.0.0-development",
   "author": "Pierre Vanduynslager",
+  "ava": {
+    "helpers": [
+      "test/helpers/**/*"
+    ],
+    "files": [
+      "test/**/*.test.js"
+    ]
+  },
   "bugs": {
     "url": "https://github.com/pvdlg/cz-conventional-commit/issues"
   },
@@ -13,7 +21,7 @@
   },
   "devDependencies": {
     "@commitlint/core": "^8.0.0",
-    "ava": "^1.0.1",
+    "ava": "^2.4.0",
     "codecov": "^3.0.0",
     "conventional-changelog-metahub": "^3.0.0",
     "conventional-commits-parser": "^3.0.0",
