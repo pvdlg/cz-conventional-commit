@@ -7,7 +7,7 @@
     "url": "https://github.com/pvdlg/cz-conventional-commit/issues"
   },
   "dependencies": {
-    "commitizen": "^3.0.0",
+    "commitizen": "^4.0.1",
     "conventional-changelog-metahub": "^2.0.1",
     "lodash": "^4.17.4",
     "word-wrap": "^1.2.3"
