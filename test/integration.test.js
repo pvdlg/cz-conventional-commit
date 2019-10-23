@@ -6,7 +6,6 @@ import {types} from 'conventional-changelog-metahub/types';
 import aliases from 'conventional-changelog-metahub/aliases';
 import engine from '..';
 
-// eslint-disable-next-line ava/no-cb-test
 test.cb(
 	'Each types and aliases produces a valid (with commitlint) and parsable (with conventional-commits-parser) commit message',
 	t => {
