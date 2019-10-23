@@ -18,10 +18,10 @@ test.cb(
 			issues: 'Fixes #3',
 		};
 
-		Object.keys(Object.assign({}, types, aliases)).map(async type => {
+		Object.keys({...types, ...aliases}).map(async type => {
 			const commitSpy = spy();
 
-			await engine.prompter({prompt: stub().resolves(Object.assign({type}, answers))}, commitSpy);
+			await engine.prompter({prompt: stub().resolves({type, ...answers})}, commitSpy);
 			const [msg] = commitSpy.firstCall.args;
 			const parsed = parser.sync(msg);
 			const lintRes = await load({extends: ['@commitlint/config-angular']}).then(opts => lint(msg, opts.rules));
