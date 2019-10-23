@@ -10,10 +10,10 @@ const config = _.merge(commitizen.configLoader.load(), {
 })['cz-conventional-commit'];
 
 module.exports = {
-	prompter(cz, commit) {
-		return cz
-			.prompt(questions({types: types.types, aliases}, config))
-			.then(answers => format(answers, {types: types.types, aliases}, config))
-			.then(commitMessage => commit(commitMessage));
+	prompter: async (cz, commit) => {
+		const answers = await cz.prompt(questions({types: types.types, aliases}, config));
+
+		const commitMessage = format(answers, {types: types.types, aliases}, config);
+		return commit(commitMessage);
 	},
 };

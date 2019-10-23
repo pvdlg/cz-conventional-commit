@@ -15,10 +15,7 @@ test('Each type and aliases produce a commit with the input subject', t => {
 	Object.keys(types)
 		.concat(Object.keys(aliases))
 		.forEach(type => {
-			t.is(
-				parser.sync(formatCommit(Object.assign({}, {type}, input), {types, aliases}, config)).subject,
-				input.subject
-			);
+			t.is(parser.sync(formatCommit({type, ...input}, {types, aliases}, config)).subject, input.subject);
 		});
 });
 
@@ -32,9 +29,7 @@ test('Each type and aliases produce a commit with a subject ending with the appr
 		.forEach(type => {
 			t.true(
 				parser
-					.sync(
-						formatCommit(Object.assign({}, {type}, input), {types, aliases}, Object.assign({}, config, {emoji: true}))
-					)
+					.sync(formatCommit({type, ...input}, {types, aliases}, {...config, emoji: true}))
 					.subject.endsWith(aliases[type] ? aliases[type].emoji : types[type].emoji)
 			);
 		});
@@ -68,7 +63,7 @@ test('Truncate the subject to fit 50 characters (with emoji)', t => {
 	};
 
 	t.is(
-		parser.sync(formatCommit(input, {types, aliases}, Object.assign({}, config, {emoji: true}))).header.length,
+		parser.sync(formatCommit(input, {types, aliases}, {...config, emoji: true})).header.length,
 		config.maxSubjectLength
 	);
 });
