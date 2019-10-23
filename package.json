@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "commitizen": "^4.0.1",
-    "conventional-changelog-metahub": "^2.0.1",
     "lodash": "^4.17.4",
     "word-wrap": "^1.2.3"
   },
@@ -16,6 +15,7 @@
     "@commitlint/core": "^8.0.0",
     "ava": "^1.0.1",
     "codecov": "^3.0.0",
+    "conventional-changelog-metahub": "^3.0.0",
     "conventional-commits-parser": "^3.0.0",
     "emoji-regex": "^8.0.0",
     "nyc": "^14.0.0",
@@ -64,15 +64,6 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "release": {
-    "analyzeCommits": {
-      "preset": "metahub",
-      "releaseRules": "conventional-changelog-metahub/release-rules"
-    },
-    "generateNotes": {
-      "preset": "metahub"
-    }
   },
   "repository": {
     "type": "git",
