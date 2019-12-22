@@ -76,7 +76,10 @@ test(hasValidationMessage, 'subject', '', /\w/);
 test(hasValidationMessage, 'subject', 'Test value', true);
 
 test('Questions are asked in the expected order', t => {
-	t.deepEqual(qOrder, questions({types, aliases}, config).map(question => question.name));
+	t.deepEqual(
+		qOrder,
+		questions({types, aliases}, config).map(question => question.name)
+	);
 });
 
 test('Choices of type question are formatted properly (description of each choice is vertically aligned)', t => {
