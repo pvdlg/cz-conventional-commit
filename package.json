@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@commitlint/core": "^8.0.0",
-    "ava": "^2.4.0",
+    "ava": "^3.1.0",
     "codecov": "^3.0.0",
     "conventional-changelog-metahub": "^4.0.0",
     "conventional-commits-parser": "^3.0.0",
