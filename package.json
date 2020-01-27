@@ -27,7 +27,7 @@
     "conventional-commits-parser": "^3.0.0",
     "emoji-regex": "^8.0.0",
     "nyc": "^15.0.0",
-    "semantic-release": "^16.0.0",
+    "semantic-release": "^17.0.0",
     "sinon": "^8.0.0",
     "stringz": "^2.0.0",
     "xo": "^0.25.3"
