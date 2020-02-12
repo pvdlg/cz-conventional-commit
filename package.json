@@ -30,7 +30,7 @@
     "semantic-release": "^17.0.0",
     "sinon": "^8.0.0",
     "stringz": "^2.0.0",
-    "xo": "^0.25.3"
+    "xo": "^0.26.0"
   },
   "engines": {
     "node": ">=8.16"
