@@ -29,7 +29,7 @@
     "nyc": "^15.0.0",
     "semantic-release": "^17.0.0",
     "sinon": "^9.0.0",
-    "stringz": "^2.0.0",
+    "stringz": "^2.1.0",
     "xo": "^0.26.0"
   },
   "engines": {
